@@ -12,22 +12,24 @@ import com.sg.ai.user.User;
 @org.springframework.web.bind.annotation.RestController
 public class RestController {
 	@GetMapping("/jblog")
-	public User httpGet( ) {
+	public User httpGet() {
 		User finduser = User.builder().id(1).username("ai").password("222").email("s@s.com").build();
 		return finduser;
 	}
+	
 	@PostMapping("/jblog")
 	public String httpPost(@RequestBody User user) {
 		return "Post resquest processed" + user.toString();
 	}
+	
 	@PutMapping("/jblog")
 	public String httpPut() {
-		return "Put request processed";
+		return "Put request procesed";
 	}
+	
 	
 	@DeleteMapping("/jblog")
 	public String httpDelete(@RequestParam int id) {
 		return "Delete request processed" + id;
-	
 	}
 }
