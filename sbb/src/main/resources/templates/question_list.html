@@ -1,17 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-<h2> 이용민의 질문 리스트 템플릿</h2>
 
-<link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
-<div class="container my-3">
 
-<table class = "table">
-	<thead class = "table-dark">
+<html layout:decorate="~{layout}">
+    
+    <meta charset="utf-8">
+    
+<div layout:fragment="content" class="container my-3">
+
+<h1>이용민의 게시물의 상세페이지입니다.</h1>
+<hr>
+<hr>
+
+
+
+<table class="table">
+	<thead class="table-dark">
 		<tr>
 			<th>번호</th>
 			<th>제목</th>
@@ -27,6 +29,12 @@
 		</tr>
 	</tbody>
 </table>
+
+
+<a th:href="@{/question/create}" class="btn btn-primary"> 질문 작성하기 </a>
+
+
 </div>
+
 </body>
 </html>
